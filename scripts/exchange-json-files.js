@@ -47,7 +47,11 @@ function exchangeFiles(item, data) {
                         console.error('Error escribiendo el archivo:', err);
                     }
                 });
-                fs.appendFile("specs.txt", "./" + item.main.replace(/([a-zA-Z-0-9]+).yaml/, " \n"), (err) => {
+
+                var spec  = item.main.replace(/([a-zA-Z-0-9]+).yaml/, "")
+                if(spec.charAt(spec.length -1) == "/" || spec.charAt(spec.length -1) == "\\" )
+                    spec = spec.substring(0,spec.length -1)
+                fs.appendFile("specs.txt", "./" +spec+ "\n", (err) => {
                     if (err) {
                         console.log(err);
                     }
