@@ -31,8 +31,6 @@ function exchangeFiles(item, data) {
 
                 title = parsedData.info.title
 
-                console.log(item.main);
-                
                 var data = {
                     main: item.main.split("\/").pop(),
                     name: title,
@@ -44,8 +42,6 @@ function exchangeFiles(item, data) {
                     descriptorVersion: "1.0.0"
                 }
 
-                console.log(data);
-                
                 fs.writeFile(filename, JSON.stringify(data), (err) => {
                     if (err) {
                         console.error('Error escribiendo el archivo:', err);
