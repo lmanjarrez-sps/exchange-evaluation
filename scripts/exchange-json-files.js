@@ -34,7 +34,7 @@ function exchangeFiles(item, data) {
                 console.log(item.main);
                 
                 var data = {
-                    main: item.main.split("\\").pop(),
+                    main: item.main.split("\/").pop(),
                     name: title,
                     organizationId: "3954b2e7-62d8-40ec-b0ef-866ee02e9891",
                     groupId: "3954b2e7-62d8-40ec-b0ef-866ee02e9891",
