@@ -31,6 +31,8 @@ function exchangeFiles(item, data) {
 
                 title = parsedData.info.title
 
+                console.log(item.main);
+                
                 var data = {
                     main: item.main.split("\\").pop(),
                     name: title,
